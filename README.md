@@ -1,2 +1,2 @@
 # api-automation-ds-batch7
-APA automation project using Playwright
+API automation project using Playwright
