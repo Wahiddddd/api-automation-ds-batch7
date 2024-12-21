@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\firgi\\OneDrive\\Desktop\\Study QA Automatic\\Bootcamp Qa\\tes\\Minggu 7\\playwright.config.js",
-    "rootDir": "C:/Users/firgi/OneDrive/Desktop/Study QA Automatic/Bootcamp Qa/tes/Minggu 7/tests",
+    "configFile": "C:\\Users\\firgi\\OneDrive\\Desktop\\Study QA Automatic\\Bootcamp Qa\\tes\\automation api\\playwright.config.js",
+    "rootDir": "C:/Users/firgi/OneDrive/Desktop/Study QA Automatic/Bootcamp Qa/tes/automation api/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -10,7 +10,9 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 4
+    },
     "preserveOutput": "always",
     "reporter": [
       [
@@ -38,13 +40,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Users/firgi/OneDrive/Desktop/Study QA Automatic/Bootcamp Qa/tes/Minggu 7/test-results",
+        "outputDir": "C:/Users/firgi/OneDrive/Desktop/Study QA Automatic/Bootcamp Qa/tes/automation api/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "",
         "name": "",
-        "testDir": "C:/Users/firgi/OneDrive/Desktop/Study QA Automatic/Bootcamp Qa/tes/Minggu 7/tests",
+        "testDir": "C:/Users/firgi/OneDrive/Desktop/Study QA Automatic/Bootcamp Qa/tes/automation api/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -58,17 +60,153 @@
     "workers": 4,
     "webServer": null
   },
-  "suites": [],
-  "errors": [
+  "suites": [
     {
-      "message": "Error: No tests found",
-      "stack": "Error: No tests found"
+      "title": "api.test.spec.js",
+      "file": "api.test.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Test Get Single User",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 357,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-12-21T18:25:52.563Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "784f5827ed72238e9d7e-8fd8d0c1871bf7cdea3c",
+          "file": "api.test.spec.js",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "Test Post API User",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 567,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-12-21T18:25:52.676Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "784f5827ed72238e9d7e-1eafe70988cfcde15b2e",
+          "file": "api.test.spec.js",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "Test Put Update User",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 626,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "{\n  name: \u001b[32m'morpheus'\u001b[39m,\n  job: \u001b[32m'zion resident'\u001b[39m,\n  updatedAt: \u001b[32m'2024-12-21T18:25:53.945Z'\u001b[39m\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-12-21T18:25:52.582Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "784f5827ed72238e9d7e-94892de8338fe08895b9",
+          "file": "api.test.spec.js",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "Test Delete User",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 537,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-12-21T18:25:52.698Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "784f5827ed72238e9d7e-adfe17f15d00b45907a5",
+          "file": "api.test.spec.js",
+          "line": 84,
+          "column": 1
+        }
+      ]
     }
   ],
+  "errors": [],
   "stats": {
-    "startTime": "2024-12-21T16:56:59.400Z",
-    "duration": 288.11800000000005,
-    "expected": 0,
+    "startTime": "2024-12-21T18:25:50.690Z",
+    "duration": 2597.683,
+    "expected": 4,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
