@@ -29,7 +29,7 @@ test('Test Get Single User', async ({ request }) => {
     
 // });
 
-test('Test Post API User', async ({request}) => {
+test('Test Post Create User', async ({request}) => {
     const bodyData = {
         "name": "morpheus",
         "job": "leader"
@@ -48,6 +48,15 @@ test('Test Post API User', async ({request}) => {
     expect(responseData.name).toBe("morpheus");
     expect(responseData.job).toBe("leader");
 
+    const schema = require('./jsonshema/post-create-chema.json');
+    const valid = ajv.validate(schema, responseData);
+
+    if (!valid) {
+        console.error("AJV Validation Errors:", ajv.errorsText());
+    }
+
+    expect(valid).toBe(true);
+
 
 });
 
@@ -58,7 +67,6 @@ test('Test Put Update User', async ({ request }) => {
         "job": "zion resident"
     };
 
-    // Permintaan PUT ke API
     const response = await request.put('https://reqres.in/api/users/2', {
         data: updateData,
         headers: {
@@ -76,8 +84,14 @@ test('Test Put Update User', async ({ request }) => {
     expect(responseData.name).toBe("morpheus");
     expect(responseData.job).toBe("zion resident");
 
-    // Logging output ke console
-    console.log(responseData);
+    const schema = require('./jsonshema/put-update-schema.json');
+    const valid = ajv.validate(schema, responseData);
+
+    if (!valid) {
+        console.error("AJV Validation Errors:", ajv.errorsText());
+    }
+
+    expect(valid).toBe(true);
 });
 
 
